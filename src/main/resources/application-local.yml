@@ -1,12 +1,12 @@
 ---
 spring:
   datasource:
+    # FIXME dockerの設定終わったら接続情報を修正 タスクAPIとは別でコンテナ建てるつもり
     driverClassName: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://localhost:3314/demo_db
     username: user
     password: password
 
-# restとSQLのログだけデバッグレベルで出力
 logging:
   level:
     web: DEBUG

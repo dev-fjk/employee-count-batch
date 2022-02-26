@@ -6,7 +6,7 @@ plugins {
     id 'jacoco'
 }
 
-group = 'api.management.task'
+group = 'batch.count.employee'
 version = '1.0.0'
 sourceCompatibility = '11'
 

@@ -1,7 +1,7 @@
 ---
 spring:
   application:
-    name: task-management-api
+    name: employee-count-batch
   messages:
     encoding: UTF-8
   jackson:

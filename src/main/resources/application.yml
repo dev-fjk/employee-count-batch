@@ -1,7 +1,7 @@
 ---
 spring:
   application:
-    name: task-management-api
+    name: employee-count-batch
   messages:
     encoding: UTF-8
   jackson:
@@ -12,32 +12,14 @@ logging:
     root: info
 
 mybatis:
+  # FIXME 実装時にmapper.xmlのディレクトリをmapper-locationsに指定
   mapper-locations: api.management.task.infrastructure.mapper.*.xml
   configuration:
-    # スネークケースからキャメルケースへの変換設定
     map-underscore-to-camel-case: true
-    # AS句で設定された列名をマップする設定
     use-column-label: true
-    # フェッチサイズ
     default-fetch-size: 1000
-    # DBからの応答タイムアウト値　秒
     default-statement-timeout: 20
-    # 取得した列が全てNullだった場合空のインスタンスを返却する(NPE防止)
     return-instance-for-empty-row: true
-
-# https://swagger.io/docs/open-source-tools/swagger-ui/usage/configuration/
-springdoc:
-  api-docs:
-    enabled: true
-    path: /v3/api-docs
-  swagger-ui:
-    path: /swagger-ui.html
-    display-request-duration: false
-    tags-sorter: method
-    defaultModelRendering: example
-    doc-expansion: list
-    config-url: /v3/api-docs/swagger-config
-    url: /v3/api-docs
 
 ---
 # -Dspring.profiles.activeを指定しなかった場合に実行される application.ymlの指定

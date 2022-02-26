@@ -48,3 +48,7 @@ $ docker-compose up -d --build
 
 - configディレクトリ配下に置いてあるcheckstyle.xmlをIDEに読み込ませる
     - [IntelliJでの手順](https://qiita.com/kent-hamaguchi/items/f4d2a5594c3c4d3195ab)
+
+## 参考
+- [git hub リポジトリ複製方法](https://docs.github.com/ja/repositories/creating-and-managing-repositories/duplicating-a-repository)
+- [リポジトリの履歴初期化方法](https://qumeru.com/magazine/526)

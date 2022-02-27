@@ -1,9 +1,8 @@
-version: '3.3'
+version: '3'
 services:
-  db:
-    build: mysql
+  mysqldb:
     image: company_db:0.0.1
-    restart: always
+    container_name: company_mysql
     environment:
       MYSQL_DATABASE: company_db
       MYSQL_USER: user
@@ -14,7 +13,8 @@ services:
       - "3315:3306"
     volumes:
       - ./mysql/initdb.d:/docker-entrypoint-initdb.d
-      - ./mysql/conf.d:/etc/mysql/conf.d
+      - ./mysql/conf.d/my.cnf:/etc/mysql/conf.d/my.cnf
+    command: mysqld --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
 
 volumes:
   mysql-db:

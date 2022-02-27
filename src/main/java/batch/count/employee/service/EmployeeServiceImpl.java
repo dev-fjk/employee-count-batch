@@ -46,7 +46,6 @@ public class EmployeeServiceImpl implements EmployeeService {
         while (true) {
             List<EmployeeDetailResult> tmpEmployeeList = employeeRepository.fetchAll(offset, FETCH_COUNT);
             if (CollectionUtils.isEmpty(tmpEmployeeList)) {
-                log.info("### 従業員情報取得処理が終了しました ###");
                 break;
             }
 

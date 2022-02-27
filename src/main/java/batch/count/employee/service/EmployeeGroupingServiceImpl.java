@@ -6,7 +6,6 @@ import batch.count.employee.entity.result.EmployeeDetailListResult.EmployeeDetai
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
-import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
 /**
@@ -20,8 +19,6 @@ public class EmployeeGroupingServiceImpl implements EmployeeGroupingService {
      */
     @Override
     public Map<Integer, List<EmployeeDetailResult>> groupingByDepartment(EmployeeDetailListResult src) {
-        return src.getEmployeeList().stream().collect(Collectors.groupingBy(
-                EmployeeDetailResult::getDepartmentId)
-        );
+        return src.getEmployeeList().stream().collect(Collectors.groupingBy(EmployeeDetailResult::getDepartmentId));
     }
 }

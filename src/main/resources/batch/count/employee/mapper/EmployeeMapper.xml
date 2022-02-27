@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="batch.count.employee.mapper.EmployeeMapper">
+
+    <!-- 従業員の詳細情報一覧を取得 -->
+    <select id="fetchDetailAll" resultMap="EmployeeDetailMap">
+        SELECT
+            e.id,
+            e.department_id,
+            t.name,
+            e.last_name,
+            e.first_name
+        FROM
+            employee e
+        INNER JOIN
+            department t ON e.department_id = t.id
+        ORDER BY
+            e.id
+        LIMIT #{offset}, #{limit}
+    </select>
+
+    <!-- Result Maps -->
+    <!-- EmployeeDetailの変換設定 -->
+    <resultMap type="batch.count.employee.entity.EmployeeDetail" id="EmployeeDetailMap">
+        <id property="id" column="id" jdbcType="BIGINT"/>
+        <result property="departmentId" column="department_id" jdbcType="INTEGER"/>
+        <result property="name" column="name" jdbcType="VARCHAR"/>
+        <result property="lastName" column="last_name" jdbcType="VARCHAR"/>
+        <result property="firstName" column="first_name" jdbcType="VARCHAR"/>
+    </resultMap>
+</mapper>

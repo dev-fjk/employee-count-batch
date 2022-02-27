@@ -7,6 +7,9 @@ import java.util.List;
 import java.util.stream.Collectors;
 import org.springframework.stereotype.Component;
 
+/**
+ * 従業員情報の型変換を行うfactory
+ */
 @Component
 public class EmployeeFactoryImpl implements EmployeeFactory {
 

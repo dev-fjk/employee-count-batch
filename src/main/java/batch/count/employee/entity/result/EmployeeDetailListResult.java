@@ -26,9 +26,14 @@ public class EmployeeDetailListResult {
         private Long id;
 
         /**
-         * 部門ID FK(Department.id)
+         * 部門ID
          */
         private Integer departmentId;
+
+        /**
+         * 部門名
+         */
+        private String departmentName;
 
         /**
          * 苗字

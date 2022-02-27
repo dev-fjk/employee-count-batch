@@ -19,6 +19,12 @@ public class EmployeeController {
      * 部門別の従業員数を集計するジョブを実行する
      */
     public void employeeCountJob() {
-        System.out.println("Hello World");
+        log.info("■■■■■ 従業員数集計ジョブ 処理開始 ■■■■■");
+
+        // 従業員情報一覧を取得
+        final var employeeDetailListResult = employeeService.fetchAll();
+        log.info("##### 全従業員数 {} #####", employeeDetailListResult.getCount());
+
+        log.info("■■■■■ 従業員数集計ジョブ 処理終了 ■■■■■");
     }
 }

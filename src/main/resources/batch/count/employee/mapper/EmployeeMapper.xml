@@ -24,7 +24,7 @@
     <resultMap type="batch.count.employee.entity.EmployeeDetail" id="EmployeeDetailMap">
         <id property="id" column="id" jdbcType="BIGINT"/>
         <result property="departmentId" column="department_id" jdbcType="INTEGER"/>
-        <result property="name" column="name" jdbcType="VARCHAR"/>
+        <result property="departmentName" column="name" jdbcType="VARCHAR"/>
         <result property="lastName" column="last_name" jdbcType="VARCHAR"/>
         <result property="firstName" column="first_name" jdbcType="VARCHAR"/>
     </resultMap>

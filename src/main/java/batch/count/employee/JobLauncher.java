@@ -28,5 +28,4 @@ public class JobLauncher {
 
         log.info("■■■■■ 従業員数集計バッチ 処理終了 ■■■■■");
     }
-
 }

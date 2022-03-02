@@ -12,8 +12,7 @@ logging:
     root: info
 
 mybatis:
-  # FIXME 実装時にmapper.xmlのディレクトリをmapper-locationsに指定
-  mapper-locations: api.management.task.infrastructure.mapper.*.xml
+  mapper-locations: batch.count.employee.mapper.*.xml
   configuration:
     map-underscore-to-camel-case: true
     use-column-label: true
